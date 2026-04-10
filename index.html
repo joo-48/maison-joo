@@ -3,216 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박은주 (Park Eun-ju) | 포트폴리오</title>
-    <!-- 구글 폰트 적용 (깔끔한 산세리프체 및 로고용 필기체) -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Park Eun-ju | Portfolio Collection</title>
+    <meta name="description" content="Gap 스타일로 디자인된 박은주의 웹 포트폴리오입니다.">
+    <!-- Fonts: Gap-like serif and clean sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- 상단 띠 배너 -->
-    <div class="top-bar">
-        <span>🎉 현재 새로운 프로젝트 제안을 환영합니다!</span>
+
+    <!-- Top Promo Banner -->
+    <div class="promo-banner">
+        <span>현재 웹 디자이너 구직 중입니다 &nbsp;•&nbsp; AVAILABLE FOR HIRE &nbsp;•&nbsp; 프로젝트 의뢰 환영</span>
     </div>
 
-    <!-- 헤더 영역 -->
-    <header class="header">
-        <div class="header-inner">
-            <div class="nav-left">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#projects">Works</a></li>
-                        <li><a href="#about">About</a></li>
-                    </ul>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-left">
+                <i class="fas fa-bars menu-icon"></i>
+                <nav class="desktop-nav">
+                    <a href="#new-arrivals">New Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#contact" class="sale-link">Contact</a>
                 </nav>
             </div>
-            <div class="logo">
-                <a href="#">Eun-JU</a>
+            
+            <div class="header-center">
+                <a href="#" class="logo">
+                    <div class="logo-box">PARK</div>
+                </a>
             </div>
-            <div class="nav-right">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+            
+            <div class="header-right">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search projects">
+                </div>
+                <div class="header-icons">
+                    <a href="#"><i class="fas fa-user-circle"></i><span>Sign In</span></a>
+                    <a href="#"><i class="fas fa-briefcase"></i></a>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- 메인 신상품 섹션 -->
-        <section class="new-arrivals-section">
-            <div class="section-header-inline">
-                <h2 class="title">New Arrival</h2>
-                <a href="#" class="view-more">&#8594;</a>
-            </div>
-            <div class="product-grid">
-                <!-- 상품 1 -->
-                <article class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/ruby_ring_1775788614833.png" alt="루비 반지">
+        <!-- Hero Banner Section -->
+        <section class="hero-section">
+            <div class="hero-image-container">
+                <img src="assets/puppy_hero.png" alt="Puppy running in nature" class="hero-image">
+                <div class="hero-content">
+                    <h4>THE SPRING COLLECTION</h4>
+                    <h1>PARK EUN-JU</h1>
+                    <p>New web design projects, UI/UX conceptual works, and digital experiences arrived.</p>
+                    <div class="hero-buttons">
+                        <a href="#categories" class="btn btn-primary">Shop Projects</a>
+                        <a href="#about" class="btn btn-secondary">View Resume</a>
                     </div>
-                </article>
-                <!-- 상품 2 -->
-                <article class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/pearl_necklace_1775788628635.png" alt="진주 목걸이">
-                    </div>
-                </article>
-                <!-- 상품 3 -->
-                <article class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/new_item_3_1775788323287.png" alt="비즈 목걸이">
-                    </div>
-                </article>
-                <!-- 상품 4 -->
-                <article class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/layered_gold_necklace_1775789052374.png" alt="레이어드 골드 목걸이">
-                    </div>
-                </article>
-                <!-- 상품 5 -->
-                <article class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/pearl_necklace_1775788628635.png" alt="진주 목걸이">
-                    </div>
-                </article>
-                <!-- 상품 6 -->
-                <article class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/new_item_3_1775788323287.png" alt="비즈 네크리스">
-                    </div>
-                </article>
-                <!-- 상품 7 -->
-                <article class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/layered_gold_necklace_1775789052374.png" alt="레이어드 골드 목걸이 2">
-                    </div>
-                </article>
-                <!-- 상품 8 -->
-                <article class="product-item">
-                    <div class="product-image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/ruby_ring_1775788614833.png" alt="루비 반지 2">
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- 그리드 형태의 포트폴리오 목록 -->
-        <section id="projects" class="portfolio-section">
-            <div class="section-header">
-                <h2>선정된 프로젝트</h2>
-                <p>최근 진행한 주요 작업물입니다.</p>
-            </div>
-            <div class="grid-container">
-                <!-- 프로젝트 1 -->
-                <article class="grid-item">
-                    <div class="image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/proj1_1775787532572.png" alt="프로젝트 이미지 1">
-                        <div class="overlay">
-                            <a href="#" class="overlay-btn">자세히 보기</a>
-                        </div>
-                    </div>
-                    <div class="item-info">
-                        <h3>Fintech Mobile App</h3>
-                        <p class="category">UI/UX Design / 2024</p>
-                        <p class="desc">금융 사용자를 위한 모바일 애플리케이션 디자인</p>
-                    </div>
-                </article>
-                <!-- 프로젝트 2 -->
-                <article class="grid-item">
-                    <div class="image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/proj2_1775787549467.png" alt="프로젝트 이미지 2">
-                        <div class="overlay">
-                            <a href="#" class="overlay-btn">자세히 보기</a>
-                        </div>
-                    </div>
-                    <div class="item-info">
-                        <h3>Fashion Brand Renewal</h3>
-                        <p class="category">Web Design / 2023</p>
-                        <p class="desc">하이엔드 패션 브랜드의 디지털 경험 개편</p>
-                    </div>
-                </article>
-                <!-- 프로젝트 3 -->
-                <article class="grid-item">
-                    <div class="image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/proj3_1775787560821.png" alt="프로젝트 이미지 3">
-                        <div class="overlay">
-                            <a href="#" class="overlay-btn">자세히 보기</a>
-                        </div>
-                    </div>
-                    <div class="item-info">
-                        <h3>Brand Identity 3D</h3>
-                        <p class="category">3D Art & Branding / 2023</p>
-                        <p class="desc">새로운 차원의 브랜드 아이덴티티 구축</p>
-                    </div>
-                </article>
-                <!-- 프로젝트 4 -->
-                <article class="grid-item">
-                    <div class="image-wrapper">
-                        <img src="file:///C:/Users/kim_j/.gemini/antigravity/brain/880ea595-ff99-4684-ae1a-544223b53fcf/proj1_1775787532572.png" alt="프로젝트 이미지 4"> <!-- 시연용 이미지 재사용 -->
-                        <div class="overlay">
-                            <a href="#" class="overlay-btn">자세히 보기</a>
-                        </div>
-                    </div>
-                    <div class="item-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p class="category">Product Design / 2022</p>
-                        <p class="desc">사용자 중심의 커머스 플랫폼 설계</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- 콜투액션(캠페인) 영역 -->
-        <section class="campaign-section" id="contact">
-            <div class="campaign-box">
-                <h2>새로운 아이디어를 구상하시나요?</h2>
-                <p>언제든 연락주시면 함께 멋진 프로젝트를 만들어갈 수 있습니다.</p>
-                <div class="contact-links">
-                    <a href="mailto:#" class="btn btn-outline">이메일 보내기</a>
-                    <a href="#" class="btn btn-outline ml-3">LinkedIn 프로필</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- Category Promo Banner -->
+        <section class="category-promo">
+            <h2>SHOP BY CATEGORY</h2>
+            <p>다양한 분야의 포트폴리오를 확인해보세요.</p>
+        </section>
+
+        <!-- Product/Project Grid Section -->
+        <section id="categories" class="product-grid-section">
+            <div class="grid-container">
+                <!-- Category Item 1 -->
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/web_design.png" alt="Web Design Project">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Web Design</h3>
+                        <p class="price">Responsive & Modern Web</p>
+                    </div>
+                </div>
+
+                <!-- Category Item 2 -->
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/uiux.png" alt="UI/UX Prototyping">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>UI/UX Prototyping</h3>
+                        <p class="price">User-Centered Applications</p>
+                    </div>
+                </div>
+
+                <!-- Category Item 3 -->
+                <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/video.png" alt="Motion Graphics">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Motion Graphics</h3>
+                        <p class="price">Dynamic Video Content</p>
+                    </div>
+                </div>
+                
+                <!-- Category Item 4 (reusing an image for structural fullness) -->
+                 <div class="product-card">
+                    <div class="img-wrapper">
+                        <img src="assets/web_design.png" alt="Branding Project">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Brand Identity</h3>
+                        <p class="price">Visual Concept & Logo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Info Strip like in E-commerce -->
+        <section class="info-strip">
+            <div class="info-item">
+                <i class="fas fa-truck"></i>
+                <span>Fast Delivery of Projects</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-undo"></i>
+                <span>Free Revisions</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-lock"></i>
+                <span>Secure Code</span>
             </div>
         </section>
     </main>
 
-    <!-- 푸터 -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4>포트폴리오 카테고리</h4>
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>About Me</h4>
                 <ul>
-                    <li><a href="#">UI/UX 디자인</a></li>
-                    <li><a href="#">웹 기반 서비스</a></li>
-                    <li><a href="#">모바일 앱</a></li>
+                    <li><a href="#">Who is Park Eun-ju?</a></li>
+                    <li><a href="#">Career History</a></li>
+                    <li><a href="#">Skills & Tools</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h4>박은주 정보</h4>
+            <div class="footer-col">
+                <h4>Projects</h4>
                 <ul>
-                    <li><a href="#">나의 소개</a></li>
-                    <li><a href="#">이력서 다운로드</a></li>
-                    <li><a href="#">디자인 프로세스</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Motion & Video</a></li>
+                    <li><a href="#">Branding</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h4>연락 채널</h4>
+            <div class="footer-col">
+                <h4>Contact Support</h4>
                 <ul>
-                    <li><a href="#">이메일 무늬</a></li>
-                    <li><a href="#">Behance 소셜</a></li>
-                    <li><a href="#">Dribbble 소셜</a></li>
+                    <li><a href="#">Email: contact@example.com</a></li>
+                    <li><a href="#">Phone: 010-0000-0000</a></li>
+                    <li><a href="#">GitHub</a></li>
                 </ul>
+            </div>
+            <div class="footer-col newsletter">
+                <h4>Stay in the Loop</h4>
+                <p>Sign up to receive updates on new projects.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email Address">
+                    <button type="button">Join</button>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-social-icons">
-                <!-- 아이콘 대신 텍스트로 임시 대체 -->
-            </div>
-            <p>본 사이트의 모든 디자인 프로젝트는 박은주의 저작물입니다.</p>
-            <p class="logo-text">Eun-JU</p>
-            <p>SEOUL, KOREA</p>
+            <p>&copy; 2026 Park Eun-ju Portfolio. Designed inspired by Gap.</p>
         </div>
     </footer>
+
 </body>
 </html>
