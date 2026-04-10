@@ -1,531 +1,456 @@
+/* CSS Variables - H&M Inspired Palette & Styling */
 :root {
-    --br-pink: #ff7db5;
-    --br-hot-pink: #ff4d8d;
-    --br-orange: #eaa049;
-    --br-soft-pink: #ffe6ee;
-    --bg-gray: #fcfaf8;
-    --text-brown: #4a2c2a;
-    
-    --font-heading: 'Jua', sans-serif;
-    --font-body: 'Noto Sans KR', sans-serif;
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --text-light: #767676;
+    --accent-red: #e50010; /* H&M signature red */
+    --gray-bg: #f4f4f4;
+    --border-color: #eaeaea;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-body);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--bg-gray);
-    color: var(--text-brown);
-    line-height: 1.5;
-    overflow-x: hidden;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
-/* Typography Utilities */
-.title-pink {
-    font-family: var(--font-heading);
-    color: var(--br-hot-pink);
-    font-size: 48px;
-    letter-spacing: 1px;
+ul {
+    list-style: none;
 }
-.title-brown {
-    font-family: var(--font-heading);
-    color: var(--text-brown);
-    font-size: 48px;
-}
-.subtitle {
-    font-size: 16px;
-    color: #666;
-    margin-top: 10px;
+
+/* Typography elements */
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-}
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Nav Bar */
-.top-nav {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 1000px;
-    background-color: var(--br-pink);
-    border-radius: 50px;
+/* Top Announcement Bar */
+.top-bar {
+    background-color: var(--gray-bg);
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--text-color);
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    color: white;
+    padding: 20px 40px;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
-.nav-brand {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 900;
-}
-
-.nav-links {
-    list-style: none;
+.main-nav ul {
     display: flex;
     gap: 30px;
-    font-weight: 700;
-    font-size: 14px;
 }
 
-.nav-links a {
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--br-hot-pink);
-}
-
-.nav-icons {
-    font-size: 20px;
-}
-
-/* Sections */
-.section {
-    padding: 100px 0;
-}
-
-.white-bg { background-color: #fff; }
-.soft-pink-bg { background-color: var(--br-soft-pink); }
-.orange-bg { background-color: var(--br-orange); }
-
-/* Hero Section */
-.hero-bg {
-    padding-top: 150px; /* nav bar space + extra */
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f6ecdf; /* Textured background approx */
-    background-image: repeating-linear-gradient(45deg, #f0e6d8 25%, transparent 25%, transparent 75%, #f0e6d8 75%, #f0e6d8), repeating-linear-gradient(45deg, #f0e6d8 25%, #f6ecdf 25%, #f6ecdf 75%, #f0e6d8 75%, #f0e6d8);
-    background-position: 0 0, 5px 5px;
-    background-size: 10px 10px;
-}
-
-.hero-frame {
-    width: 90%;
-    max-width: 1200px;
-    height: 70vh;
-    min-height: 500px;
-    border: 10px solid #ca496f; /* Inner dark pink border */
-    border-radius: 60px;
+.main-nav a {
+    font-size: 24px; /* 필기체에 맞게 크기 증가 */
+    font-weight: 600;
+    text-transform: none; /* 필기체는 대소문자 구분이 중요함 */
+    letter-spacing: 1px;
     position: relative;
-    background-color: #fff;
-    box-shadow: 0 0 0 15px var(--br-pink); /* Outer lighter pink border */
-    display: flex;
-    overflow: hidden;
+    color: #A9A9A9; /* 연한 그레이 컬러 */
+    font-family: 'Dancing Script', cursive; /* 필기체 적용 */
 }
 
-.hero-content {
-    flex: 1;
-    background: radial-gradient(circle, #fffbfc 0%, #ecdcca 100%);
-    display: flex;
-    align-items: center;
-    padding: 60px;
-    position: relative;
-}
-
-/* 프로필 사진 이미지 스타일 */
-.hero-profile-img {
+.main-nav a::after {
+    content: '';
     position: absolute;
-    right: 40px;
-    top: 40px;
-    bottom: 40px;
-    width: 350px;
-    height: calc(100% - 80px); /* 위아래 여백을 뺀 높이만큼 꽉 차게 */
-    border-radius: 20px; /* 약간 둥근 네모 형태 */
-    object-fit: cover; /* 네모칸 안에 사진이 가득 차게 */
-    z-index: 1;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 5px solid #fff;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--accent-red);
+    transition: width 0.3s ease;
 }
 
-.hero-text {
-    max-width: 500px;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-sub {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--br-hot-pink);
-    margin-bottom: 5px;
-}
-
-.hero-title {
-    font-family: var(--font-heading);
-    font-size: 80px;
-    line-height: 1.1;
-    color: var(--text-brown);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 0px white;
-}
-
-.hero-desc {
-    font-size: 16px;
-    color: #555;
-    font-weight: 700;
-    line-height: 1.6;
-}
-
-.hero-side-cards {
-    width: 250px;
-    background: #fff;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    border-left: 2px solid rgba(0,0,0,0.05);
-}
-
-.side-card {
-    border-radius: 20px;
-    padding: 25px 20px;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.side-card:hover {
-    transform: translateY(-5px);
-}
-
-.side-card.purple { background-color: #7b6ba1; }
-.side-card.brown { background-color: #5d4037; }
-
-.side-card h4 {
-    font-family: var(--font-body);
-    font-weight: 900;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-.side-card p {
-    font-size: 12px;
-    opacity: 0.9;
-}
-
-/* Arch Cards (Promotion Section) */
-.arch-card-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-.arch-card {
-    width: 240px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.arch-card:hover {
-    transform: translateY(-10px);
-}
-
-.arch-img {
-    height: 240px;
-    border-radius: 120px 120px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 80px;
-    margin-bottom: 20px;
-}
-
-.arch-body {
-    text-align: center;
-}
-
-.arch-body .date {
-    font-size: 11px;
-    color: #999;
-    margin-bottom: 12px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 12px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.arch-body h3 {
-    font-weight: 900;
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.arch-body p {
-    font-size: 13px;
-    color: #777;
-}
-
-/* Grid Cards (New Item Section) */
-.pink-divider-bar {
-    background-color: var(--br-pink);
-    color: white;
-    padding: 15px 0;
-    margin-bottom: 50px;
-}
-
-.divider-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.brand-pej {
-    font-family: var(--font-heading);
-    font-size: 24px;
-    margin-right: 50px;
-}
-
-.divider-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.divider-links li:hover {
-    text-decoration: underline;
-}
-
-.grid-card-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 20px;
-    padding: 0 20px;
-}
-
-.large-card {
-    flex: 1;
-    border-radius: 30px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s;
-}
-
-.large-card:hover {
-    transform: scale(1.02);
-}
-
-.large-card h3 {
-    font-family: var(--font-heading);
-    font-size: 40px;
-    line-height: 1.2;
-    margin-bottom: 30px;
-    text-align: center;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
-}
-
-.large-placeholder {
-    font-size: 120px;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-}
-
-.small-cards {
-    flex: 1.5;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.small-card {
-    background: white;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-
-.small-card:hover {
-    transform: translateY(-5px);
-}
-
-.card-img {
+.main-nav a:hover::after {
     width: 100%;
-    height: 160px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    color: #444;
-    margin-bottom: 10px;
-    font-size: 18px;
 }
 
-.card-btn {
-    width: 36px;
-    height: 36px;
-    background-color: var(--br-pink);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main-nav a:hover {
+    color: var(--accent-red);
+}
+
+.logo {
     position: absolute;
-    bottom: 25px;
-    right: 25px;
-    font-weight: bold;
-    font-size: 18px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Play/Contact Section (BR Play) */
-.play-container {
-    position: relative;
-    max-width: 1000px;
+.logo a {
+    font-size: 56px; /* 더 커진 필기체 로고 */
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #B19CD9; /* 연보라 색상 */
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Main New Arrivals Section */
+.new-arrivals-section {
+    padding: 30px 40px 60px;
+    max-width: 1600px;
     margin: 0 auto;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--bg-color); /* White */
 }
 
-.play-pink-line {
+.section-header-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-header-inline .title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #A9A9A9; /* 연한 그레이 컬러 */
+    font-family: 'Dancing Script', cursive; /* 필기체 폰트 적용 */
+}
+
+.section-header-inline .view-more {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.section-header-inline .view-more:hover {
+    transform: translateX(5px);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; /* Minimal gap between minimalist photos */
+}
+
+.product-item {
+    cursor: pointer;
+    text-align: center;
+}
+
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 135%; /* Tall portrait style for products */
+    background-color: transparent; /* Clean white */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.product-image-wrapper img {
     position: absolute;
     top: 50%;
-    left: -50vw;
-    right: -50vw;
-    height: 100px;
-    background-color: var(--br-pink);
-    transform: translateY(-50%);
-    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain; /* Don't crop the isolated products */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.pill-cards {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    gap: 60px;
-    width: 100%;
-    padding: 0 80px;
+.product-item:hover .product-image-wrapper img {
+    transform: translate(-50%, -50%) scale(1.05); /* Slight zoom on hover */
 }
 
-.pill-card {
-    flex: 1;
-    border-radius: 200px;
-    background-color: white;
-    height: 480px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border: 6px solid #d48b3b;
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 34px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: var(--transition-smooth);
 }
 
-.pill-card:hover {
-    transform: translateY(-10px);
+.btn-red {
+    background-color: var(--accent-red);
+    color: #fff;
+    border: 1px solid var(--accent-red);
 }
 
-.pill-top {
-    flex: 1;
-    padding: 50px 20px 20px;
+.btn-red:hover {
+    background-color: #fff;
+    color: var(--accent-red);
+    border-color: #fff;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color);
+    color: #fff;
+}
+
+.ml-3 {
+    margin-left: 15px;
+}
+
+/* Portfolio Grid */
+.portfolio-section {
+    padding: 100px 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.section-header {
     text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: white;
+    cursor: pointer;
+    position: relative;
 }
 
-.pill-top h4 {
-    font-size: 15px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
-    font-weight: 900;
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 135%; /* Tall portrait style for products */
+    overflow: hidden;
+    background-color: var(--gray-bg);
 }
 
-.bubble-badge {
-    color: white;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 15px;
+.image-wrapper img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
     text-align: center;
-    transform: rotate(-10deg);
-    line-height: 1.2;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    z-index: 2;
+    background: linear-gradient(to top, rgba(255,255,255,0.9), transparent);
 }
 
-.pill-bottom {
-    flex: 1;
-    padding: 30px 20px;
+.overlay-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.grid-item:hover .image-wrapper img {
+    transform: scale(1.03); /* Subtle H&M style zoom */
+}
+
+.grid-item:hover .overlay {
+    bottom: 0;
+    opacity: 1;
+}
+
+.item-info {
+    padding: 20px 0;
+}
+
+.item-info h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.item-info .category {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+.item-info .desc {
+    font-size: 13px;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+/* Campaign Area */
+.campaign-section {
+    padding: 0 40px 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.campaign-box {
+    background-color: #f7e6e5; /* Soft tinted background like H&M promos */
+    padding: 100px 40px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .nav-links { display: none; }
-    .hero-frame { flex-direction: column; height: auto; box-shadow: 0 0 0 10px var(--br-pink); border-width: 6px; }
-    .hero-side-cards { width: 100%; border-left: none; border-top: 1px solid #eee; flex-direction: row; flex-wrap: wrap; }
-    .side-card { flex: 1; min-width: 150px; }
-    .hero-profile-img { 
-        position: relative;
-        right: auto;
-        top: auto;
-        bottom: auto;
-        width: 100%;
-        max-width: 300px;
-        height: 300px;
-        margin-top: 30px;
-        border-radius: 20px;
+.campaign-box h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.campaign-box p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--gray-bg);
+    padding: 80px 40px 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.footer-column h4 {
+    font-size: 13px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    font-size: 13px;
+    color: #444;
+    font-weight: 300;
+}
+
+.footer-column ul li a:hover {
+    color: var(--accent-red);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.footer-bottom .logo-text {
+    font-size: 32px;
+    font-weight: 700;
+    color: #B19CD9; /* 연보라 색상 */
+    margin: 25px 0;
+    letter-spacing: 1px;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    .hero-title { font-size: 50px; }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
-    .grid-card-container { flex-direction: column; }
-    .small-cards { grid-template-columns: 1fr; }
+    .nav-left, .nav-right {
+        display: none; /* Hide for mobile, would use hamburger in full ver. */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
     
-    .pill-cards { flex-direction: column; padding: 0 20px; gap: 40px; }
-    .play-container { height: auto; padding: 50px 0; }
-    .play-pink-line { display: none; }
-    .pill-card { height: 400px; width: 100%; max-width: 300px; margin: 0 auto; border-radius: 150px;}
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .campaign-box {
+        padding: 60px 20px;
+    }
 }
