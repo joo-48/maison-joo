@@ -260,9 +260,9 @@ a {
 }
 
 .arch-bg img {
-    width: 65%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    mix-blend-mode: multiply; /* to blend stock photos nicely */
 }
 
 /* Colors matching actual BR screenshot */
